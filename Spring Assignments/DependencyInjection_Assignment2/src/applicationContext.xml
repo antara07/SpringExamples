@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+<bean id="country1" class="com.wipro.spring.ioc.models.Country">
+<property name="countryId" value="CO01"></property>
+<property name="countryName" value="India"></property>
+</bean>
+
+<bean id="country2" class="com.wipro.spring.ioc.models.Country">
+<property name="countryId" value="CO02"></property>
+<property name="countryName" value="Sri Lanka"></property>
+</bean>
+
+<bean id= "player1" class="com.wipro.spring.ioc.models.Player">
+<property name="playerId" value="PO01"></property>
+<property name="playerName" value="Sachin"></property>
+<property name="country"><ref bean="country1"/></property>
+</bean>
+
+<bean id= "player2" class="com.wipro.spring.ioc.models.Player">
+<property name="playerId" value="PO02"></property>
+<property name="playerName" value="Dhoni"></property>
+<property name="country"><ref bean="country1"/></property>
+</bean>
+
+<bean id= "player3" class="com.wipro.spring.ioc.models.Player">
+<property name="playerId" value="PO03"></property>
+<property name="playerName" value="Jayasuriya"></property>
+<property name="country"><ref bean="country2"/></property>
+</bean>
+
+
+<bean id= "player4" class="com.wipro.spring.ioc.models.Player">
+<property name="playerId" value="PO04"></property>
+<property name="playerName" value="Sangakkara"></property>
+<property name="country"><ref bean="country2"/></property>
+</bean>
+
+<bean id= "player5" class="com.wipro.spring.ioc.models.Player">
+<property name="playerId" value="PO05"></property>
+<property name="playerName" value="Malinga"></property>
+<property name="country"><ref bean="country2"/></property>
+</bean>
+</beans>
